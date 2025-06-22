@@ -10,7 +10,7 @@ Este proyecto es una plataforma web desarrollada en **CodeIgniter 3 (MVC)** para
 
 ```bash
 git clone https://github.com/joaquincasarino85/infocontrol-ci3-files-mvc-example.git
-cd infocontrol-ci3-mvc
+cd infocontrol-ci3-files-mvc-example
 
 2. Iniciá los contenedores:
 
