@@ -1,60 +1,70 @@
-InfoControl - Document Management for Contractors
-This project is a web platform developed with CodeIgniter 3 (MVC) to upload and manage contractor documents. It’s ready to run in Docker environments and can easily scale to infrastructures like AWS.
+# **InfoControl - Document Management for Contractors**
 
-🚀 Quick Installation with Docker
-Clone the repository:
+This project is a web platform developed with **CodeIgniter 3 (MVC)** to upload and manage contractor documents. It’s ready to run in Docker environments and can easily scale to infrastructures like AWS.
 
+---
+
+## 🚀 **Quick Installation with Docker**
+
+1. **Clone the repository:**
+
+```bash
 git clone https://github.com/joaquincasarino85/infocontrol-ci3-files-mvc-example.git
 cd infocontrol-ci3-files-mvc-example
-Start the containers:
+```
 
+2. **Start the containers:**
+
+```bash
 docker-compose up --build
-Access the application:
+```
 
-Web App: http://localhost:8080
+3. **Access the application:**
 
-📦 Database
-The MySQL container automatically creates the infocontrol database.
-The db/init.sql file defines and creates the documentos table on first startup (if it doesn't exist).
+- Web App: [http://localhost:8080](http://localhost:8080)
 
-Default MySQL credentials:
+---
 
-User: root
+## 🗄️ **Database**
 
-Password: rootpass
+The MySQL container automatically creates the `infocontrol` database.  
+The `db/init.sql` file defines and creates the `documentos` table on first startup (if it doesn't exist).
 
-Database: infocontrol
+**Default MySQL credentials:**
 
-🗂️ File Structure
-app/: Project source code (Controllers, Models, and Views from CodeIgniter 3)
+- **User:** `root`  
+- **Password:** `rootpass`  
+- **Database:** `infocontrol`
 
-uploads/: Local folder where uploaded documents are stored (simulates S3 in development)
+---
 
-db/init.sql: Auto-executed table creation script
+## 📁 **File Structure**
 
-docker/: Dockerfile and configuration for PHP/Apache
+- `app/`: Project source code (Controllers, Models, and Views from CodeIgniter 3)  
+- `uploads/`: Local folder where uploaded documents are stored (simulates S3 in development)  
+- `db/init.sql`: Auto-executed table creation script  
+- `docker/`: Dockerfile and configuration for PHP/Apache  
+- `docker-compose.yml`: Service orchestration file
 
-docker-compose.yml: Service orchestration
+---
 
-🧱 MVC Pattern
+## 🧱 **MVC Pattern**
+
 The MVC (Model-View-Controller) pattern divides the application into three components:
 
-Model: Handles data access logic (database)
-
-View: User interface (HTML + forms)
-
-Controller: Connects the model and the view
+- **Model:** Handles data access logic (database)  
+- **View:** User interface (HTML + forms)  
+- **Controller:** Connects the model and the view  
 
 This structure promotes clean, reusable, and maintainable code.
 
-☁️ Scalability
+---
+
+## ☁️ **Scalability**
+
 The project is ready to integrate with cloud services such as:
 
-S3 for real document storage
-
-RDS/MySQL for managed database services
-
-ECS/EKS for scalable deployments
-
-Git for version control
-
+- **S3** for real document storage  
+- **RDS/MySQL** for managed database services  
+- **ECS/EKS** for scalable deployments  
+- **Git** for version control
