@@ -1,64 +1,60 @@
-# InfoControl - Gestión de Documentos para Contratistas
+InfoControl - Document Management for Contractors
+This project is a web platform developed with CodeIgniter 3 (MVC) to upload and manage contractor documents. It’s ready to run in Docker environments and can easily scale to infrastructures like AWS.
 
-Este proyecto es una plataforma web desarrollada en **CodeIgniter 3 (MVC)** para cargar y gestionar documentos de contratistas. Está lista para ejecutarse en entornos Docker y puede escalarse fácilmente a infraestructuras como AWS.
+🚀 Quick Installation with Docker
+Clone the repository:
 
----
-
-## 🚀 Instalación rápida con Docker
-
-1. Cloná el repositorio:
-
-```bash
 git clone https://github.com/joaquincasarino85/infocontrol-ci3-files-mvc-example.git
 cd infocontrol-ci3-files-mvc-example
-
-2. Iniciá los contenedores:
+Start the containers:
 
 docker-compose up --build
+Access the application:
 
-3. Accedé a la aplicación:
+Web App: http://localhost:8080
 
-App Web: http://localhost:8080
+📦 Database
+The MySQL container automatically creates the infocontrol database.
+The db/init.sql file defines and creates the documentos table on first startup (if it doesn't exist).
 
----
+Default MySQL credentials:
 
-Base de Datos
+User: root
 
-El contenedor de MySQL crea automáticamente la base infocontrol.
-El archivo db/init.sql define y crea la tabla documentos al iniciar por primera vez (si no existe).
-El acceso por defecto a MySQL es:
-usuario: root
-contraseña: rootpass
-base de datos: infocontrol
+Password: rootpass
 
----
+Database: infocontrol
 
-Estructura de archivos
+🗂️ File Structure
+app/: Project source code (Controllers, Models, and Views from CodeIgniter 3)
 
-app/: Código fuente del proyecto (Controladores, Modelos y Vistas de CodeIgniter 3).
-uploads/: Carpeta local donde se almacenan los documentos subidos (simula S3 en desarrollo).
-db/init.sql: Script de creación automática de tabla.
-docker/: Archivos Dockerfile y configuraciones para PHP/Apache.
-docker-compose.yml: Orquestación de servicios.
+uploads/: Local folder where uploaded documents are stored (simulates S3 in development)
 
----
+db/init.sql: Auto-executed table creation script
 
-MVC
+docker/: Dockerfile and configuration for PHP/Apache
 
-El patrón MVC (Modelo-Vista-Controlador) divide la aplicación en tres componentes:
+docker-compose.yml: Service orchestration
 
-Modelo: Lógica de acceso a datos (base de datos).
-Vista: Interfaz del usuario (HTML + formularios).
-Controlador: Lógica que conecta el modelo con la vista.
-Esto permite mantener un código organizado, reutilizable y fácil de mantener.
+🧱 MVC Pattern
+The MVC (Model-View-Controller) pattern divides the application into three components:
 
----
+Model: Handles data access logic (database)
 
-Escalabilidad
+View: User interface (HTML + forms)
 
-El proyecto está preparado para integrarse con servicios cloud como:
+Controller: Connects the model and the view
 
-S3 para almacenamiento real.
-RDS/MySQL para base de datos gestionada.
-ECS/EKS para despliegues escalables.
-Versionado con Git para control de cambios.
+This structure promotes clean, reusable, and maintainable code.
+
+☁️ Scalability
+The project is ready to integrate with cloud services such as:
+
+S3 for real document storage
+
+RDS/MySQL for managed database services
+
+ECS/EKS for scalable deployments
+
+Git for version control
+
